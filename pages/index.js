@@ -140,3 +140,9 @@ export default function Home({ theme, toggleTheme }) {
     </>
   )
 }
+
+
+// Forza rendering server-side, evita static generation al build
+export async function getServerSideProps() {
+  return { props: {} }
+}
